@@ -1,0 +1,76 @@
+// 全局变量
+// :root {
+//   --cp-text1: 口#FCA21C;
+//   --main-color: red;
+//   --nihao-color: #983;
+// }
+
+// // 局部css变量
+// :root {
+//   --nihao-color: #983;
+// }
+// // 一般用于组件
+// .footer {
+//   --footer-color: green;
+// }
+// // 覆盖变量
+// .btn-color {
+//   background-color: red;
+// }
+// #nprogress .bar {
+//   background-color: var(--cp-primary) !important;
+// }
+
+
+:root {
+  // 问诊患者：色板
+  --cp-primary: #16C2A3;
+  --cp-plain: #EAF8F6;
+  --cp-orange: #FCA21C;
+  --cp-text1: #121826;
+  --cp-text2: #3C3E42;
+  --cp-text3: #6F6F6F;
+  --cp-tag: #848484;
+  --cp-dark: #979797;
+  --cp-tip: #C3C3C5;
+  --cp-disable: #D9DBDE;
+  --cp-line: #EDEDED;
+  --cp-bg: #F6F7F9;
+  --cp-price: #EB5757;
+  --cp-red:#ff0000;
+  // // 覆盖vant变量  主题颜色变量
+  --van-primary-color: var(--cp-primary) !important;
+   
+}
+
+
+// 全局样式
+body {
+  font-size:  14px !important;
+  color: var(--cp-text1);
+}
+a {
+  color: var(--cp-text2);
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol {
+  margin: 0;
+  padding: 0;
+}
+
+// 进度条组件颜色样式
+#nprogress .bar {
+  background-color: var(--cp-primary) !important;
+}
+// 全局覆盖van-tab样式
+.van-tabs {
+  .van-tabs__nav {
+    padding: 0 0 15px 0;
+  }
+  .van-tabs__line {
+    width: 20px;
+    background-color: var(--cp-primary);
+  }
+  .van-tab {
+    padding: 0 15px;
+  }
+}

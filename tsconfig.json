@@ -1,0 +1,46 @@
+// 这个提供的 JSON 片段是 TypeScript 项目中 tsconfig.json 文件的一部分，该文件用于配置 TypeScript 编译器的行为。以下是这个配置的主要部分的中文解释：
+// "files": []：这个属性指定了 TypeScript 编译器应该考虑的文件列表。在这里是一个空数组，表示 TypeScript 将包括项目中的所有 TypeScript 文件。
+// "references": [...]：这个属性是一个项目引用的数组。每个引用包含一个 "path" 属性，指向另一个 TypeScript 项目。这用于构建复合项目，其中一个 TypeScript 项目依赖于另一个。
+// "path": "./tsconfig.node.json"：这个引用指向另一个 TypeScript 项目，其配置在 tsconfig.node.json 中。这表示当前项目依赖于或引用了tsconfig.node.json 中定义的项目。
+// "path": "./tsconfig.app.json"：类似地，这个引用指向另一个 TypeScript 项目，其配置在 tsconfig.app.json 中。这表示当前项目依赖于或引用了tsconfig.app.json 中定义的项目。
+// "path": "./tsconfig.vitest.json"：同样，这个引用指向另一个 TypeScript 项目，其配置在 tsconfig.vitest.json 中。这表示当前项目依赖于或引用了tsconfig.vitest.json 中定义的项目。
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "baseUrl": "./", // 解析非相对模块的基础地址，默认是当前目录
+    "paths": {
+      // 路径映射，相对于baseUrl
+      "@/*": [
+        "src/*"
+      ],
+    },
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "types": [
+      "vite/client"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "./auto-import.d.ts",
+    "components.d.ts"
+  ],
+  // "references": [
+  //   {
+  //     "path": "./tsconfig.node.json"
+  //   }
+  // ]
+}
