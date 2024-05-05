@@ -1,10 +1,5 @@
 <script setup lang="ts"></script>
 <template>
-  <!-- 路由出口 aaaa-->
-  <!-- 1111 -->
-
-  <!-- ....... -->
-
   <RouterView />
 </template>
 
