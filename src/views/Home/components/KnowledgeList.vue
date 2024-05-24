@@ -24,6 +24,7 @@ const onLoad = async () => {
   const res = await getKnowledgePage(params.value)
   // 接口获取的到的数据吧data.rows字段的数据追加给list
   list.value.push(...res.data.rows)
+  console.log(res.data.rows)
 
   // 判断已经加载完成了
   if (params.value.current >= res.data.pageTotal) {
