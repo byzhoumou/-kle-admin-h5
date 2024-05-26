@@ -102,7 +102,7 @@ const scrollLeft = () => {
   console.log(index.value)
 }
 
-// 小圆点点击事件
+// 小圆点点击事件  好
 const setIndex = (k: any) => {
   // 更新索引值
   index.value = k
