@@ -78,7 +78,9 @@
     <hr />
     <!-- 子组件传过来的数据  这里的add是子组件发送的数据携带了一个方法e -->
     <Ceshi2 @add2="onAdd2"></Ceshi2>
-    <p>{{ num }}</p>
+    <p>子传来方法赋值{{ num }}</p>
+    <!-- // 子传父亲传递数据的的第二种方法 -->
+    <Ceshi2 @add3="onAdd3"></Ceshi2>
   </div>
 </template>
 <script setup lang="ts">
@@ -104,9 +106,13 @@ const num = ref(0)
 const onAdd2 = (e: any) => {
   console.log('子组件传过来的方法=====》', e)
   // 这里的e是子组件传过来的随机数方法
-  console.log((num.value = e))
+  num.value = e
+  console.log(e)
 }
-
+// 子传父亲传递数据的的第二种方法
+const onAdd3 = (e) => {
+  console.log('子组件传递的的数据第二种方法', e)
+}
 // 计算属性的玩法
 const userInfo = computed(() => store.userInfo)
 
