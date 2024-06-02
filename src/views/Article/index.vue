@@ -70,7 +70,7 @@
     <hr />
 
     <!-- 父子传值  这里的item代表propslist数组中的每一项 传给子组件-->
-    <Ceshi1 :obj="item" v-for="(item, idenx) in propslist"></Ceshi1>
+    <Ceshi1 :obj="item" v-for="(item, idenx) in propslist" :ssss="true"></Ceshi1>
 
     <hr />
     <!-- 子组件传过来的数据  这里的add是子组件发送的数据携带了一个参数e -->
