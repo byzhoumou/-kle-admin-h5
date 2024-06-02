@@ -89,7 +89,7 @@ import stoe from '@/components/stoe.vue'
 import Ceshi1 from '@/components/Ceshi1.vue'
 import Ceshi2 from '@/components/Ceshi2.vue'
 
-// 父子组件传值 的数据   这个数据是传个子组件用的、
+// 父子组件传值 的数据   这个数据是传给子组件用的、
 const propslist = ref([
   { name: '张三', id: 1 },
   { name: '李四', id: 2 },
@@ -110,7 +110,7 @@ const onAdd2 = (e: any) => {
   console.log(e)
 }
 // 子传父亲传递数据的的第二种方法
-const onAdd3 = (e) => {
+const onAdd3 = (e: any) => {
   console.log('子组件传递的的数据第二种方法', e)
 }
 // 计算属性的玩法

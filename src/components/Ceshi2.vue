@@ -1,12 +1,12 @@
 <template>
   <div class="stoe-container">
     <!-- 这里的 $emit方法发送了一个add事件 携带数据123 传给父组件  -->
-    <button @click="$emit('add1', transmit)">1向父组件传的值：点击触发</button>
+    <button @click="$emit('add1', transmit)">子1向父组件传的值：点击触发</button>
     <hr />
     <!-- 发送随机数方法-->
-    <button @click="$emit('add2', Math.random())">2向父组件传的值：点击触发</button>
+    <button @click="$emit('add2', Math.random())">子2向父组件传的值：点击触发</button>
     <!-- 子组件向付父组件传值的第二种方式 -->
-    <button @click="onClick">3向父组件传的值：点击触发</button>
+    <button @click="onClick">子3向父组件传的值：点击触发</button>
   </div>
 </template>
 
