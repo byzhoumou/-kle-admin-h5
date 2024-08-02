@@ -9,6 +9,7 @@ import { VantResolver } from '@vant/auto-import-resolver'
 // 配置svg插件
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from 'path'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,11 +31,11 @@ export default defineConfig({
       // 自动生成类型定义文件
       dts: './auto-import.d.ts',
       // 这里的自动引入会导致组件样式重复  所以用括号里的不要导入
-      resolvers: [VantResolver({ importStyle: true })]
+      resolvers: [VantResolver({ importStyle: true }), ElementPlusResolver()]
     }),
     Components({
       // 这里的importStyle: 'sass' 在这里 不要写在上面
-      resolvers: [VantResolver({ importStyle: false })]
+      resolvers: [VantResolver({ importStyle: false }), ElementPlusResolver()]
     }),
     // 配置svg图片
     createSvgIconsPlugin({

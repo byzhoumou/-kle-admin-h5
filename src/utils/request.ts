@@ -9,7 +9,8 @@ import router from '../router'
 import { showToast } from 'vant'
 const instance = axios.create({
   // 1.基础地址，超时时间r
-  baseURL: 'http://consult-api.itheima.net',
+  // baseURL: 'http://consult-api.itheima.net',
+  baseURL: 'http://localhost:3000',
   timeout: 10000
 })
 // 请求拦截器

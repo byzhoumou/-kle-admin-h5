@@ -34,3 +34,5 @@ export const delPatient = (id: string) => request(`patient/del/${id}`, 'DELETE')
 
 // 查询患者详情          这里的GET在封装的时候设置了默认所以可以省略    上面没写请求方式的也是一样
 export const getPatientDetail = (id: string) => request<Patient>(`patient/info/${id}`)
+
+// 数据库的操作
